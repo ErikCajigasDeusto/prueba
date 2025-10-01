@@ -1,6 +1,9 @@
 package ejemploSwingGit;
 
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 
 public class VentanaSwingGit extends JFrame{
 	
@@ -9,6 +12,23 @@ public class VentanaSwingGit extends JFrame{
 		setTitle("Hola swing");
 		setSize(640,480);
 		setLocationRelativeTo(null);
+		
+		JMenuBar barraMenu = new JMenuBar();
+		//LAs barras no se añade como un componente sino de la siguiente forma
+		setJMenuBar(barraMenu);
+		
+		JMenu menuFichero = new JMenu("FIchero");
+		barraMenu.add(menuFichero);
+		
+		
+		JMenuItem itemMostrar = new JMenuItem("Mostrar");
+		menuFichero.add(itemMostrar);
+		
+		JMenuItem itemLimpiar = new JMenuItem("Limpiar");
+		menuFichero.add(itemLimpiar);
+		
+		JMenuItem itemSalir = new JMenuItem("Salir");
+		menuFichero.add(itemSalir);
 		
 		setVisible(true);
 	}
