@@ -1,9 +1,14 @@
 package ejemploSwingGit;
 
+import java.awt.BorderLayout;
+
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
+import javax.swing.border.Border;
 
 public class VentanaSwingGit extends JFrame{
 	
@@ -29,6 +34,13 @@ public class VentanaSwingGit extends JFrame{
 		
 		JMenuItem itemSalir = new JMenuItem("Salir");
 		menuFichero.add(itemSalir);
+		
+		JTabbedPane panelTabs = new JTabbedPane();
+		add(panelTabs, BorderLayout.CENTER);
+		
+		panelTabs.addTab("Datos personales", new JPanel());
+		panelTabs.addTab("Preferencias", new JPanel());
+		panelTabs.addTab("Comentarios", new JPanel());
 		
 		setVisible(true);
 	}
