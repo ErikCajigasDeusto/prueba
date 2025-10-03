@@ -34,7 +34,7 @@ public class VentanaSwingGit extends JFrame{
 		JMenuItem itemLimpiar = new JMenuItem("Clean");
 		menuFichero.add(itemLimpiar);
 		
-		JMenuItem itemSalir = new JMenuItem("Salir");
+		JMenuItem itemSalir = new JMenuItem("Exit");
 		menuFichero.add(itemSalir);
 		
 		JTabbedPane panelTabs = new JTabbedPane();
