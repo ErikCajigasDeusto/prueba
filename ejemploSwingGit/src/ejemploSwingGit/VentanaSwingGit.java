@@ -28,7 +28,7 @@ public class VentanaSwingGit extends JFrame{
 		barraMenu.add(menuFichero);
 		
 		
-		JMenuItem itemMostrar = new JMenuItem("Mostrar");
+		JMenuItem itemMostrar = new JMenuItem("Show");
 		menuFichero.add(itemMostrar);
 		
 		JMenuItem itemLimpiar = new JMenuItem("Clean");
