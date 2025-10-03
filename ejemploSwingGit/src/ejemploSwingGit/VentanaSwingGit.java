@@ -1,7 +1,9 @@
 package ejemploSwingGit;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -22,7 +24,7 @@ public class VentanaSwingGit extends JFrame{
 		//LAs barras no se añade como un componente sino de la siguiente forma
 		setJMenuBar(barraMenu);
 		
-		JMenu menuFichero = new JMenu("FIchero");
+		JMenu menuFichero = new JMenu("File");
 		barraMenu.add(menuFichero);
 		
 		
@@ -37,10 +39,17 @@ public class VentanaSwingGit extends JFrame{
 		
 		JTabbedPane panelTabs = new JTabbedPane();
 		add(panelTabs, BorderLayout.CENTER);
+		JPanel personal = new JPanel();
+		JPanel preferencias = new JPanel();
+		JPanel comentarios = new JPanel();
 		
-		panelTabs.addTab("Datos personales", new JPanel());
-		panelTabs.addTab("Preferencias", new JPanel());
-		panelTabs.addTab("Comentarios", new JPanel());
+		panelTabs.addTab("Datos personales", personal);
+		panelTabs.addTab("Preferencias", preferencias);
+		panelTabs.addTab("Comentarios", comentarios);
+		
+		 Border lineBorder = BorderFactory.createLineBorder(Color.RED);
+	     Border titledBorder = BorderFactory.createTitledBorder(lineBorder, "datos");
+	     personal.setBorder(titledBorder);
 		
 		setVisible(true);
 	}
